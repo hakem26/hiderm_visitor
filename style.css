@@ -1,0 +1,118 @@
+body {
+    font-family: Vazir FD, sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Vazir FD, sans-serif;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #sales-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #sales-table th,
+  #sales-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: right;
+  }
+  
+  #sales-table th {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  #items-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  #items-container input {
+    flex: 1;
+  }
+  
+  #date {
+    width: 250px;
+  }
+  
+  /* اضافه کردن استایل برای textarea */
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-bottom: 15px;
+  }
+  
+  #items-summary {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f1f1f1;
+    resize: none;
+  }
+  
