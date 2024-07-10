@@ -5,30 +5,30 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: #333;
-  }
-  
-  form {
+}
+
+form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-  }
-  
-  input,
-  textarea,
-  button {
+}
+
+input,
+textarea,
+button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -36,13 +36,13 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
     font-family: Vazir FD, sans-serif;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  button {
+}
+
+button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -50,51 +50,51 @@ body {
     transition: background-color 0.3s ease;
     display: inline-block;
     width: 100px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
-  }
-  
-  #sales-table table {
+}
+
+#sales-table table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #sales-table th,
-  #sales-table td {
+}
+
+#sales-table th,
+#sales-table td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: right;
-  }
-  
-  #sales-table th {
+}
+
+#sales-table th {
     background-color: #eee;
     color: #333;
-  }
-  
-  #items-container {
+}
+
+#items-container {
     display: flex;
     gap: 10px;
     align-items: center;
-  }
-  
-  #items-container input {
+}
+
+#items-container input {
     flex: 1;
-  }
-  
-  #date {
+}
+
+#date {
     width: 250px;
-  }
-  
-  /* اضافه کردن استایل برای textarea */
-  textarea {
+}
+
+/* اضافه کردن استایل برای textarea */
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -102,9 +102,9 @@ body {
     box-sizing: border-box;
     resize: vertical;
     margin-bottom: 15px;
-  }
-  
-  #items-summary {
+}
+
+#items-summary {
     width: 100%;
     height: 100px;
     margin-bottom: 15px;
@@ -114,5 +114,24 @@ body {
     padding: 10px;
     background-color: #f1f1f1;
     resize: none;
-  }
-  
+}
+
+.edit-item-btn,
+.delete-item-btn {
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 2px;
+    padding: 2px 4px;
+    width: auto;
+}
+
+.edit-item-btn {
+    background-color: orange;
+}
+
+.delete-item-btn {
+    background-color: red;
+}

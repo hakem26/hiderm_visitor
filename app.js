@@ -65,8 +65,8 @@ function renderTable() {
             <td>${sale.paymentDate || ''}</td>
             <td>${sale.balance}</td>
             <td>
-                <button type="button" onclick="editSale(${index})">ویرایش</button>
-                <button type="button" onclick="deleteSale(${index})">حذف</button>
+                <button type="button" class="edit-item-btn" onclick="editSale(${index})">ویرایش</button>
+                <button type="button" class="delete-item-btn" onclick="deleteSale(${index})">حذف</button>
             </td>
         </tr>`;
     });
@@ -156,6 +156,10 @@ addItemBtn.addEventListener('click', () => {
     }
 
     itemsSummary.value = currentSummary.join('\n');
+    productNameInput.value = '';
+    unitPriceInput.value = '';
+    quantityInput.value = 1;
+    productNameInput.focus();
 });
 
 // Clear form inputs
