@@ -78,11 +78,19 @@ function renderTable() {
 function renderItems(items, saleIndex) {
     return items.map((item, itemIndex) => {
         const [productName, quantity, unitPrice] = item.split('-');
-        return `${productName} (${quantity} عدد) - ${unitPrice} تومان
-                <button type="button" class="edit-item-btn hidden" onclick="editItem(${saleIndex}, ${itemIndex})">ویرایش</button>
-                <button type="button" class="delete-item-btn hidden" onclick="deleteItem(${saleIndex}, ${itemIndex})">حذف</button>`;
-    }).join('<br>');
+        const itemTotalPrice = unitPrice * quantity;
+        if (quantity > 1) {
+            return `${productName} ${quantity}عدد (${itemTotalPrice})
+                    <button type="button" class="edit-item-btn hidden" onclick="editItem(${saleIndex}, ${itemIndex})">ویرایش</button>
+                    <button type="button" class="delete-item-btn hidden" onclick="deleteItem(${saleIndex}, ${itemIndex})">حذف</button>`;
+        } else {
+            return `${productName} (${itemTotalPrice})
+                    <button type="button" class="edit-item-btn hidden" onclick="editItem(${saleIndex}, ${itemIndex})">ویرایش</button>
+                    <button type="button" class="delete-item-btn hidden" onclick="deleteItem(${saleIndex}, ${itemIndex})">حذف</button>`;
+        }
+    }).join(' | ');
 }
+
 
 // Update product list dropdown
 function updateProductList() {
@@ -114,18 +122,32 @@ function editSale(index) {
 
 // Delete a sale
 function deleteSale(index) {
-    sales.splice(index, 1);
-    saveSales();
-    renderTable();
+    if (confirm('آیا از حذف اطمینان دارید؟')) {
+        sales.splice(index, 1);
+        saveSales();
+        renderTable();
+    }
+}
+
+// Check if the selected date is already used in sales
+function isDateAlreadyUsed(date) {
+    return sales.some(sale => sale.date === date);
 }
 
 // Open day button event listener
 openDayBtn.addEventListener('click', () => {
-    formContent.classList.remove('hidden');
-    openDayBtn.disabled = true;
-    closeDayBtn.disabled = false;
-    dateInput.disabled = true;
+    const selectedDate = dateInput.value;
+
+    if (isDateAlreadyUsed(selectedDate)) {
+        alert('این تاریخ قبلا انتخاب شده. جهت اضافه کردن فاکتور در جدول دکمه ویرایش را بزنید');
+    } else {
+        formContent.classList.remove('hidden');
+        openDayBtn.disabled = true;
+        closeDayBtn.disabled = false;
+        dateInput.disabled = true;
+    }
 });
+
 
 // Close day button event listener
 closeDayBtn.addEventListener('click', () => {
@@ -158,7 +180,7 @@ addItemBtn.addEventListener('click', () => {
     itemsSummary.value = currentSummary.join('\n');
     productNameInput.value = '';
     unitPriceInput.value = '';
-    quantityInput.value = 1;
+    quantityInput.value = '';
     productNameInput.focus();
 });
 
@@ -168,7 +190,7 @@ function clearForm(clearBuyer = true) {
         buyerInput.value = '';
     }
     productNameInput.value = '';
-    quantityInput.value = 1;
+    quantityInput.value = '';
     unitPriceInput.value = '';
     discountInput.value = '0';
     paymentInput.value = '0';
@@ -176,7 +198,6 @@ function clearForm(clearBuyer = true) {
     paymentDateInput.value = '';
 }
 
-// Save sale button event listener
 saveSaleBtn.addEventListener('click', () => {
     const date = dateInput.value;
     const buyer = buyerInput.value.trim();
@@ -185,7 +206,10 @@ saveSaleBtn.addEventListener('click', () => {
     const paymentType = paymentTypeInput.value.trim();
     const paymentDate = paymentDateInput.value;
     const itemsSummaryList = itemsSummary.value.split('\n').filter(item => item.trim() !== '');
-    const total = itemsSummaryList.reduce((sum, item) => sum + parseFloat(item.split('-')[2] * item.split('-')[1]), 0);
+    const total = itemsSummaryList.reduce((sum, item) => {
+        const [productName, quantity, unitPrice] = item.split('-');
+        return sum + parseFloat(quantity) * parseFloat(unitPrice);
+    }, 0);
     const balance = total - discount - payment;
 
     const sale = {
@@ -214,6 +238,7 @@ saveSaleBtn.addEventListener('click', () => {
     dateInput.disabled = true;
 });
 
+
 // Edit an item in items summary
 function editItem(saleIndex, itemIndex) {
     const sale = sales[saleIndex];
@@ -230,10 +255,12 @@ function editItem(saleIndex, itemIndex) {
 
 // Delete an item from items summary
 function deleteItem(saleIndex, itemIndex) {
-    const sale = sales[saleIndex];
-    sale.items.splice(itemIndex, 1);
-    saveSales();
-    renderTable();
+    if (confirm('آیا از حذف اطمینان دارید؟')) {
+        const sale = sales[saleIndex];
+        sale.items.splice(itemIndex, 1);
+        saveSales();
+        renderTable();
+    }
 }
 
 // Convert Gregorian date to Jalali date (if needed)

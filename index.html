@@ -18,31 +18,34 @@
         <button type="button" id="open-day-btn">باز کردن روز</button>
 
         <div id="form-content" class="hidden">
-            <label for="buyer">نام خریدار:</label>
-            <input type="text" id="buyer">
+            <div class="items-container">
+                <label for="buyer">نام خریدار:</label>
+                <input type="text" id="buyer">
+            </div>
 
-            <div id="items-container">
+            <div id="items-container" class="items-container">
                 <label>اقلام و قیمت:</label>
                 <input type="text" id="product-name" list="product-list" placeholder="نام محصول">
                 <datalist id="product-list"></datalist>
                 <input type="number" id="quantity" value="1" min="1" placeholder="تعداد">
                 <input type="number" id="unit-price" placeholder="قیمت واحد">
                 <button type="button" id="add-item-btn">اضافه به فاکتور</button>
+                <textarea id="items-summary" readonly></textarea>
             </div>
 
-            <label for="discount">تخفیف:</label>
-            <input type="number" id="discount" value="0">
+            <div class="items-container">
+                <label for="discount">تخفیف:</label>
+                <input type="number" id="discount" value="0">
 
-            <label for="payment">رقم پرداختی:</label>
-            <input type="number" id="payment" value="0">
+                <label for="payment">رقم پرداختی:</label>
+                <input type="number" id="payment" value="0">
 
-            <label for="paymentType">نوع پرداخت:</label>
-            <input type="text" id="paymentType" placeholder="نوع پرداخت">
+                <label for="paymentType">نوع پرداخت:</label>
+                <input type="text" id="paymentType" placeholder="نوع پرداخت">
 
-            <label for="paymentDate">تاریخ واریز:</label>
-            <input data-jdp id="paymentDate">
-
-            <textarea id="items-summary" readonly></textarea>
+                <label for="paymentDate">تاریخ واریز:</label>
+                <input data-jdp id="paymentDate">
+            </div>
 
             <button type="button" id="save-sale-btn">ثبت فاکتور</button>
             <button type="button" id="close-day-btn">بستن روز</button>
