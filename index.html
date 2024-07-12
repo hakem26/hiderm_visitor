@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>مدیریت فروش</title>
+    <link rel="stylesheet" href="assets/css/VazirFD.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/jalaali.min.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/utils.js"></script>
 </head>
 
 <body>
-    شروع
+    <h1>مدیریت فروش</h1>
+    <div id="select-collaborator">
+        <label for="collaborator">انتخاب همکار:</label>
+        <input list="collaborators" id="collaborator" name="collaborator">
+        <datalist id="collaborators">
+            <!-- همکاران از دیتابیس بارگذاری می‌شوند -->
+        </datalist>
+        <button onclick="selectCollaborator()">انتخاب همکار</button>
+    </div>
+
+    <div id="select-month" style="display:none;">
+        <label for="month">انتخاب ماه:</label>
+        <select id="month">
+            <option value="01">فروردین</option>
+            <option value="02">اردیبهشت</option>
+            <option value="03">خرداد</option>
+            <option value="04">تیر</option>
+            <option value="05">مرداد</option>
+            <option value="06">شهریور</option>
+            <option value="07">مهر</option>
+            <option value="08">آبان</option>
+            <option value="09">آذر</option>
+            <option value="10">دی</option>
+            <option value="11">بهمن</option>
+            <option value="12">اسفند</option>
+        </select>
+        <button onclick="selectMonth()">انتخاب ماه</button>
+    </div>
+
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
