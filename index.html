@@ -1,85 +1,15 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سیستم مدیریت فروش</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
-    <link rel="stylesheet" href="VazirFD.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <h1>سیستم مدیریت فروش</h1>
-    <form id="sales-form">
-        <label for="date">تاریخ:</label>
-        <input data-jdp id="date">
-        <button type="button" id="open-day-btn">باز کردن روز</button>
-
-        <div id="form-content" class="hidden">
-            <div class="items-container">
-                <label for="buyer">نام خریدار:</label>
-                <input type="text" id="buyer">
-            </div>
-
-            <div id="items-container" class="items-container">
-                <label>اقلام و قیمت:</label>
-                <input type="text" id="product-name" list="product-list" placeholder="نام محصول">
-                <datalist id="product-list"></datalist>
-                <input type="number" id="quantity" value="1" min="1" placeholder="تعداد">
-                <input type="number" id="unit-price" placeholder="قیمت واحد">
-                <button type="button" id="add-item-btn">اضافه به فاکتور</button>
-                <textarea id="items-summary" readonly></textarea>
-            </div>
-
-            <div class="items-container">
-                <label for="discount">تخفیف:</label>
-                <input type="number" id="discount" value="0">
-
-                <label for="payment">رقم پرداختی:</label>
-                <input type="number" id="payment" value="0">
-
-                <label for="paymentType">نوع پرداخت:</label>
-                <input type="text" id="paymentType" placeholder="نوع پرداخت">
-
-                <label for="paymentDate">تاریخ واریز:</label>
-                <input data-jdp id="paymentDate">
-            </div>
-
-            <button type="button" id="save-sale-btn">ثبت فاکتور</button>
-            <button type="button" id="close-day-btn">بستن روز</button>
-        </div>
-    </form>
-
-    <div id="sales-table">
-        <table>
-            <thead>
-                <tr>
-                    <th>تاریخ</th>
-                    <th>نام خریدار</th>
-                    <th>اقلام و قیمت</th>
-                    <th>جمع کل</th>
-                    <th>تخفیف</th>
-                    <th>رقم پرداختی</th>
-                    <th>نوع پرداخت</th>
-                    <th>تاریخ واریز</th>
-                    <th>مانده</th>
-                    <th>عملیات</th>
-                </tr>
-            </thead>
-            <tbody id="sales-tbody">
-                <!-- ردیف‌ها به صورت داینامیک اضافه می‌شوند -->
-            </tbody>
-        </table>
-    </div>
-
-    <script src="app.js"></script>
-    <script src="jalaali.min.js"></script>
-    <script type="text/javascript"
-        src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-    <script src="datepicker.js"></script>
-
+    شروع
 </body>
 
 </html>

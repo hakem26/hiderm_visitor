@@ -1,31 +1,30 @@
-/* Generated for Chrome v124.0.0.0 on Linux */
 @font-face {
   font-family: "Vazir FD";
-  src: url("./Vazir-Light-FD.woff2") format("woff2");
+  src: url("../fonts/Vazir-Light-FD.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Vazir FD";
-  src: url("./Vazir-Medium-FD.woff2") format("woff2");
+  src: url("../fonts/Vazir-Medium-FD.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Vazir FD";
-  src: url("./Vazir-FD.woff2") format("woff2");
+  src: url("../fonts/Vazir-FD.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Vazir FD";
-  src: url("./Vazir-Bold-FD.woff2") format("woff2");
+  src: url("../fonts/Vazir-Bold-FD.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Vazir FD";
-  src: url("./Vazir-Black-FD.woff2") format("woff2");
+  src: url("../fonts/Vazir-Black-FD.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
