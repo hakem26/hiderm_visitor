@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت فاکتور</title>
+    <link rel="stylesheet" href="../assets/css/VazirFD.css">
+    <link rel="stylesheet" href="../assets/css/jalalidatepicker.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <h1>ثبت فاکتور</h1>
+    <form id="invoice-form">
+        <label for="invoice-number">شماره فاکتور:</label>
+        <input type="text" id="invoice-number" name="invoice-number" required>
+
+        <label for="invoice-date">تاریخ فاکتور:</label>
+        <input type="text" id="invoice-date" name="invoice-date" required>
+
+        <label for="customer-name">نام مشتری:</label>
+        <input type="text" id="customer-name" name="customer-name" required>
+
+        <label for="total-amount">مبلغ کل:</label>
+        <input type="number" id="total-amount" name="total-amount" required>
+
+        <label for="items">جزئیات کالاها:</label>
+        <textarea id="items" name="items" required></textarea>
+
+        <button type="submit">ثبت فاکتور</button>
+    </form>
+
+    <script src="../assets/js/jalaali.min.js"></script>
+    <script src="../assets/js/jalalidatepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

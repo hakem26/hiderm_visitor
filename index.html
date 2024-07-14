@@ -3,45 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>مدیریت فروش</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت فروش و گزارش کاری</title>
     <link rel="stylesheet" href="assets/css/VazirFD.css">
+    <link rel="stylesheet" href="assets/css/jalalidatepicker.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/jalaali.min.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/utils.js"></script>
 </head>
 
 <body>
-    <h1>مدیریت فروش</h1>
-    <div id="select-collaborator">
-        <label for="collaborator">انتخاب همکار:</label>
-        <input list="collaborators" id="collaborator" name="collaborator">
-        <datalist id="collaborators">
-            <!-- همکاران از دیتابیس بارگذاری می‌شوند -->
+    <h1>مدیریت فروش و گزارش کاری</h1>
+    <form id="coworker-form">
+        <label for="coworker-select">انتخاب همکار:</label>
+        <input list="coworkers" id="coworker-select" name="coworker">
+        <datalist id="coworkers">
+            <!-- اینجا اطلاعات همکاران از دیتابیس بارگذاری می‌شود -->
         </datalist>
-        <button onclick="selectCollaborator()">انتخاب همکار</button>
-    </div>
+        <button type="button" onclick="selectCoworker()">انتخاب همکار</button>
+    </form>
 
-    <div id="select-month" style="display:none;">
-        <label for="month">انتخاب ماه:</label>
-        <select id="month">
-            <option value="01">فروردین</option>
-            <option value="02">اردیبهشت</option>
-            <option value="03">خرداد</option>
-            <option value="04">تیر</option>
-            <option value="05">مرداد</option>
-            <option value="06">شهریور</option>
-            <option value="07">مهر</option>
-            <option value="08">آبان</option>
-            <option value="09">آذر</option>
-            <option value="10">دی</option>
-            <option value="11">بهمن</option>
-            <option value="12">اسفند</option>
+    <form id="month-select-form" style="display: none;">
+        <label for="month-select">انتخاب ماه:</label>
+        <select id="month-select">
+            <option value="m01">فروردین</option>
+            <option value="m02">اردیبهشت</option>
+            <option value="m03">خرداد</option>
+            <option value="m04">تیر</option>
+            <option value="m05">مرداد</option>
+            <option value="m06">شهریور</option>
+            <option value="m07">مهر</option>
+            <option value="m08">آبان</option>
+            <option value="m09">آذر</option>
+            <option value="m10">دی</option>
+            <option value="m11">بهمن</option>
+            <option value="m12">اسفند</option>
         </select>
-        <button onclick="selectMonth()">انتخاب ماه</button>
-    </div>
+        <button type="button" onclick="selectMonth()">انتخاب ماه</button>
+    </form>
 
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/jalaali.min.js"></script>
+    <script src="assets/js/jalalidatepicker.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
